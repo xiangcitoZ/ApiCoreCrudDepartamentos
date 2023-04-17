@@ -34,7 +34,15 @@ namespace ApiCoreCrudDepartamentos.Controllers
         //DEBEMOS HACERLO CON [Route]
         //AL DEVOLVER UN ACTION
 
-
+        [HttpPost]
+        public async Task<ActionResult>
+         InsertDepartamento(Departamento departamento)
+            {
+                await this.repo.InsertarDepartamento
+                    (departamento.IdDepartamento, departamento.Nombre
+                    , departamento.Localidad);
+                return Ok();
+            }
 
 
 
