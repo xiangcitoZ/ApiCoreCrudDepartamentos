@@ -21,7 +21,8 @@ builder.Services.AddSwaggerGen(options =>
     options.SwaggerDoc("v1", new OpenApiInfo
     {
         Title = "Api CRUD departamentos",
-        Description = "CRUD"
+        Description = "CRUD",
+        Version = "v1"
     });
 
 });
